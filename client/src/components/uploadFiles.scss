@@ -1,0 +1,162 @@
+.box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    h2 {
+        margin-bottom: 1rem;
+    }
+    .boxContent {
+        margin-top: 2rem;
+        border: 2px dashed #1C8ADB;
+        border-radius: 1rem;
+        background-color: #dbe6ff9d;
+        .boxImg {
+            width: 10vw; 
+            position: absolute; 
+            top: 15vw;
+            left: 45vw;
+        }
+        .pDropDrag {
+            margin-top:2rem;
+            margin-bottom: 1rem;
+            color: rgb(167, 167, 167);
+            font-size: 16px;
+        }
+        label {
+            width: 30vw;
+            height: 10vw;
+            opacity: 0;
+        }
+    }    
+    .boxContent:hover {
+        background-color: #dbe6ff !important;
+    }
+
+    .pFile {
+        margin-top: 2rem;
+    }
+    .pResult {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #dbe6ff9d;
+        border-radius: 10px;
+        text-align: left;
+      
+    }
+    .totalSize {
+      background-color: transparent;
+      color: #1C8ADB;
+      margin-top: 0.5rem;
+      text-align: left;
+      padding-left: 1rem;
+      
+    }
+    .cardFile {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        text-align: left;
+        margin-top: 1rem;
+        overflow: hidden;
+        .cardOneFile {
+            padding: 0 !important;
+            padding-top: 5px !important;
+            display: flex;
+            align-items: center;
+            background-color: #dbe6ff9d;
+            margin-top: 1rem;
+            border-radius: 10px;
+            padding: 10px;
+            .cardImgFile {
+               img {
+                     width: 5vw;
+                     object-fit: cover;
+               }
+            }
+        }
+    }
+   
+   
+}
+
+// _________________________ MEDIAS _________________________
+
+@media (max-width: 450px) {
+    body {
+        padding-top: 1rem;
+    }
+    .box {
+        width: 92vw;
+        margin-top: 5rem;
+        .boxContent {
+            margin-top: 0;
+            label {
+                height: 85vw;
+            }
+            .boxImg {
+                width: 38vw; 
+                position: absolute; 
+                top: 62vw;
+                left: 32vw;
+            }
+            .pDropDrag {
+                margin-top: -3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 451px) and (max-width: 850px) {
+    body {
+        padding-top: 0;
+    }
+    .box {
+        margin-top: 4rem !important;
+        width: 80vw;
+        margin-top: 10rem;
+        .boxContent {
+            label {
+                height: 45vw;
+            }
+            .boxImg {
+                width: 25vw; 
+                position: absolute; 
+                top: 32vw;
+                left: 38vw;
+            }
+            .pDropDrag {
+                margin-top: -2rem;
+                margin-bottom: 1rem;
+            }
+        }    
+    }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    body {
+        padding-top: 4rem;
+    }
+    .box {
+        width: 40vw;
+        .boxContent {
+            margin-top: 0;
+            label {
+                height: 20vw;
+            }
+            .boxImg {
+                width: 10vw; 
+                position: absolute; 
+                top: 16vw;
+                left: 45vw;
+            }
+            .pDropDrag {
+                margin-top: -3rem;
+                margin-bottom: 1rem;
+            }
+        }    
+    }
+}
