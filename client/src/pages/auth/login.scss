@@ -1,4 +1,6 @@
 .boxLogin {
+    margin-top: 8rem;
+    width: 30vw;
     background-color: #fff;
     text-align: center;
     align-items: center;
@@ -9,17 +11,20 @@
         margin-bottom: 2rem;
         font-weight: 500;
         text-decoration: underline;
+        font-size: 40px;
     }
     .boxInput {
         display: flex;
         flex-direction: column;
         input {
-            width: 100%;
+            margin:auto;
+            width: 80%;
             border-radius: 1rem;
             border: 1px solid #e9e9e9;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             padding: 0.5rem;
             margin-bottom: 1rem;
+            font-size: 16px;
             &:focus {
                 outline: 2px solid #dbe6ff;
             }
@@ -28,12 +33,23 @@
                 padding-left: 5px;
             }
         }
+        .divMessage {
+            word-wrap: break-word;
+            .message {
+                padding-top: 10px;
+            }
+            .passEncr{
+                padding-top: 10px;
+                margin-left: 1px;
+            }
+        }
         button {
+            margin: auto 1rem;
             margin-top: 1rem;
-            width: 100%;
+            width: 30%;
             border-radius: 1rem;
             border: none;
-            padding: 0.5rem;
+            padding: 10px;
             margin-bottom: 1rem;
             background-color: #1C8ADB;
             color: #fff;
@@ -45,5 +61,127 @@
             box-shadow: 0px 0px 10px 1px rgb(107, 107, 107);
         }
         
+    }
+}
+
+// ________________________ MEDIA ________________________
+
+@media (max-width: 700px) {
+    .boxLogin {
+        width: 90vw;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .boxInput {
+            input {
+                width: 100%;
+            }
+        }
+        .divButton {
+            display: flex;
+            flex-direction: column;
+            button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        .divMessage {
+            word-wrap: break-word;
+            .message {
+                padding-top: 10px;
+            }
+            .passEncr{
+                padding-top: 10px;
+                margin-left: 10px;
+            }
+        }
+       
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1023px) {
+    .boxLogin {
+        margin-top: 15rem;
+        width: 70vw;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .boxInput {
+            input {
+                width: 100%;
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    }
+    .divMessage {
+        word-wrap: break-word;
+        .message {
+            padding-top: 10px;
+        }
+        .passEncr{
+            padding-top: 10px;
+            margin-left: 1px !important;
+        }
+    }
+    button {
+        padding: 11px !important;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1250px) {
+    .boxLogin {
+        margin-top: 15rem;
+        width: 70vw;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .boxInput {
+            input {
+                width: 100%;
+                .passEncr {
+                    width: 10%;
+                 }
+            }
+        }
+        .divMessage {
+            word-wrap: break-word;
+            .message {
+                padding-top: 10px;
+            }
+            .passEncr{
+                padding-top: 10px;
+                margin-left: 1px !important;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 1251px) and (max-width: 1500px) {
+    .boxLogin {
+        margin-top: 15rem;
+        width: 50vw;
+        h1 {
+            font-size: 2.5rem;
+        }
+        .boxInput {
+            input {
+                width: 100%;
+                .passEncr {
+                    width: 10%;
+                 }
+            }
+        }
+        .divMessage {
+            word-wrap: break-word;
+            .message {
+                padding-top: 10px;
+            }
+            .passEncr{
+                padding-top: 10px;
+                margin-left: 1px !important;
+            }
+        }
     }
 }

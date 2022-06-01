@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 
 import "./login.scss";
-
+//______________________________________________________
 export const Login = () => {
   const [login, setLogin] = useState({
     name: "",
@@ -50,42 +50,49 @@ export const Login = () => {
   };
 
   return (
-    <div className="boxLogin">
-      <h1>Bienvenido/a</h1>
-      <div className="boxInput">
-        <input
-          className="inpLogin"
-          placeholder="Ingrese su nombre"
-          type="text"
-          autoComplete="off"
-          name="name"
-          value={login.name}
-          onChange={handleChange}
-        />
-        <input
-          className="inpLogin"
-          placeholder="Contraseña"
-          type="password"
-          autoComplete="off"
-          name="password"
-          value={login.password}
-          onChange={handleChange}
-        />
-        <button type="submit" onClick={handleSubmit}>
-          LOGIN
-        </button>
-        <button type="submit" onClick={handleSubmitApi}>
-          ENVIO API
-        </button>
-        {result ? (
-          <>
-            <p>{result.message}</p>
-            <p>{result.password}</p>
-          </>
-        ) : (
-          <p>NO</p>
-        )}
-      </div>
-    </div>
+    <header className="boxLogin">
+      <main>
+        <section>
+          <h1>Bienvenido/a</h1>
+        </section>
+        <section className="boxInput">
+          <input
+            className="inpLogin"
+            placeholder="Ingrese su nombre"
+            type="text"
+            autoComplete="off"
+            name="name"
+            value={login.name}
+            onChange={handleChange}
+          />
+          <input
+            className="inpLogin"
+            placeholder="Contraseña"
+            type="password"
+            autoComplete="off"
+            name="password"
+            value={login.password}
+            onChange={handleChange}
+          />
+          <div className="divButton">
+            <button type="submit" onClick={handleSubmit}>
+              LOGIN
+            </button>
+            <button type="submit" onClick={handleSubmitApi}>
+              ENVIO API
+            </button>
+          </div>
+
+          {result ? (
+            <div className="divMessage">
+              <p className="message">{result.message}</p>
+              <p className="passEncr">{result.password}</p>
+            </div>
+          ) : (
+            <p>NO</p>
+          )}
+        </section>
+      </main>
+    </header>
   );
 };
