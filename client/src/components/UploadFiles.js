@@ -31,44 +31,40 @@ export const UploadFiles = () => {
   }, [files]);
 
   return (
-    <header className="box">
-      <main>
-        <section>
-          <h2>Arrastre sus arhivos</h2>
-        </section>
-        <section>
-          <div className="boxContent">
-            <img className="boxImg" src={uploadImg} alt="" />
-            <FileUploader
-              className="inputFile"
-              multiple={true}
-              handleChange={handleChange}
-              name="file"
-            />
-            <p className="pDropDrag">Haz click o arraste sus archivos aquí</p>
-          </div>
-          <div className="cardFile">
-            {loading ? (
-              <Loading />
-            ) : (
-              files &&
-              files.map((file, index) => {
-                return (
-                  <div key={index} className="cardOneFile">
-                    <div>
-                      <img src={upLoadImgFile} alt="icono-archivo" />
-                    </div>
-                    <div>
-                      <p>{file.name}</p>
-                      <p>{file.size} bytes</p>
-                    </div>
+    <main className="box">
+      <h2>Arrastre sus arhivos</h2>
+      <section>
+        <div className="boxContent">
+          <img className="boxImg" src={uploadImg} alt="" />
+          <FileUploader
+            className="inputFile"
+            multiple={true}
+            handleChange={handleChange}
+            name="file"
+          />
+          <p className="pDropDrag">Haz click o arraste sus archivos aquí</p>
+        </div>
+        <div className="cardFile">
+          {loading ? (
+            <Loading />
+          ) : (
+            files &&
+            files.map((file, index) => {
+              return (
+                <div key={index} className="cardOneFile">
+                  <div>
+                    <img src={upLoadImgFile} alt="icono-archivo" />
                   </div>
-                );
-              })
-            )}
-          </div>
-        </section>
-      </main>
-    </header>
+                  <div>
+                    <p>{file.name}</p>
+                    <p>{file.size} bytes</p>
+                  </div>
+                </div>
+              );
+            })
+          )}
+        </div>
+      </section>
+    </main>
   );
 };
